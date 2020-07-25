@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[Z6Y1EqUe8Fc8LpzkOZjDA]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[Discworld]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>216</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.05</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">194190</id>
+  <books_count type="integer">29</books_count>
+  <ratings_count type="integer">307819</ratings_count>
+  <text_reviews_count type="integer">9377</text_reviews_count>
+  <original_publication_year type="integer">1983</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">24</original_publication_day>
+  <average_rating>3.99</average_rating>
+  <best_book type="Book">
+    <id type="integer">34497</id>
+    <title>The Color of Magic (Discworld, #1; Rincewind, #1)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407111017l/34497._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407111017l/34497._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1857065</id>
+  <books_count type="integer">155</books_count>
+  <ratings_count type="integer">188664</ratings_count>
+  <text_reviews_count type="integer">4822</text_reviews_count>
+  <original_publication_year type="integer">1987</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">12</original_publication_day>
+  <average_rating>4.24</average_rating>
+  <best_book type="Book">
+    <id type="integer">386372</id>
+    <title>Mort (Death, #1; Discworld, #4)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1128601</id>
+  <books_count type="integer">118</books_count>
+  <ratings_count type="integer">158157</ratings_count>
+  <text_reviews_count type="integer">4065</text_reviews_count>
+  <original_publication_year type="integer">1989</original_publication_year>
+  <original_publication_month type="integer">8</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.33</average_rating>
+  <best_book type="Book">
+    <id type="integer">64216</id>
+    <title>Guards! Guards! (Discworld, #8; City Watch #1)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1431127356l/64216._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1431127356l/64216._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">583611</id>
+  <books_count type="integer">131</books_count>
+  <ratings_count type="integer">137440</ratings_count>
+  <text_reviews_count type="integer">4054</text_reviews_count>
+  <original_publication_year type="integer">1987</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">15</original_publication_day>
+  <average_rating>4.03</average_rating>
+  <best_book type="Book">
+    <id type="integer">34507</id>
+    <title>Equal Rites (Discworld, #3; Witches, #1)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407706800l/34507._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407706800l/34507._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">592532</id>
+  <books_count type="integer">142</books_count>
+  <ratings_count type="integer">117674</ratings_count>
+  <text_reviews_count type="integer">3490</text_reviews_count>
+  <original_publication_year type="integer">1986</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">2</original_publication_day>
+  <average_rating>3.98</average_rating>
+  <best_book type="Book">
+    <id type="integer">34506</id>
+    <title>The Light Fantastic (Discworld, #2; Rincewind #2)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1636617</id>
+  <books_count type="integer">73</books_count>
+  <ratings_count type="integer">99990</ratings_count>
+  <text_reviews_count type="integer">3060</text_reviews_count>
+  <original_publication_year type="integer">2004</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">25</original_publication_day>
+  <average_rating>4.39</average_rating>
+  <best_book type="Book">
+    <id type="integer">64222</id>
+    <title>Going Postal (Discworld, #33; Moist von Lipwig, #1)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1636629</id>
+  <books_count type="integer">96</books_count>
+  <ratings_count type="integer">98024</ratings_count>
+  <text_reviews_count type="integer">2813</text_reviews_count>
+  <original_publication_year type="integer">1992</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.30</average_rating>
+  <best_book type="Book">
+    <id type="integer">34484</id>
+    <title>Small Gods (Discworld, #13)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">62580</id>
+  <books_count type="integer">114</books_count>
+  <ratings_count type="integer">90842</ratings_count>
+  <text_reviews_count type="integer">4154</text_reviews_count>
+  <original_publication_year type="integer">2003</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.27</average_rating>
+  <best_book type="Book">
+    <id type="integer">34494</id>
+    <title>The Wee Free Men (Discworld, #30; Tiffany Aching, #1)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1443764106l/34494._SY160_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1443764106l/34494._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">819071</id>
+  <books_count type="integer">7</books_count>
+  <ratings_count type="integer">79927</ratings_count>
+  <text_reviews_count type="integer">1881</text_reviews_count>
+  <original_publication_year type="integer">1993</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">11</original_publication_day>
+  <average_rating>4.38</average_rating>
+  <best_book type="Book">
+    <id type="integer">400354</id>
+    <title>Men at Arms (Discworld, #15; City Watch #2)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1796454</id>
+  <books_count type="integer">36</books_count>
+  <ratings_count type="integer">80141</ratings_count>
+  <text_reviews_count type="integer">2584</text_reviews_count>
+  <original_publication_year type="integer">1991</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.28</average_rating>
+  <best_book type="Book">
+    <id type="integer">34517</id>
+    <title>Reaper Man (Discworld, #11; Death, #2)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1389211958l/34517._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1389211958l/34517._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1712283</id>
+  <books_count type="integer">68</books_count>
+  <ratings_count type="integer">93020</ratings_count>
+  <text_reviews_count type="integer">2297</text_reviews_count>
+  <original_publication_year type="integer">2002</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.50</average_rating>
+  <best_book type="Book">
+    <id type="integer">47989</id>
+    <title>Night Watch (Discworld, #29; City Watch, #6)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320518310l/47989._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320518310l/47989._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">929672</id>
+  <books_count type="integer">98</books_count>
+  <ratings_count type="integer">70563</ratings_count>
+  <text_reviews_count type="integer">1963</text_reviews_count>
+  <original_publication_year type="integer">1991</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.22</average_rating>
+  <best_book type="Book">
+    <id type="integer">2442</id>
+    <title>Witches Abroad (Discworld, #12; Witches #3)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1403326937l/2442._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1403326937l/2442._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1494222</id>
+  <books_count type="integer">120</books_count>
+  <ratings_count type="integer">89885</ratings_count>
+  <text_reviews_count type="integer">3024</text_reviews_count>
+  <original_publication_year type="integer">1988</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">10</original_publication_day>
+  <average_rating>4.13</average_rating>
+  <best_book type="Book">
+    <id type="integer">34504</id>
+    <title>Wyrd Sisters (Discworld, #6; Witches #2)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1275974472l/34504._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1275974472l/34504._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1229354</id>
+  <books_count type="integer">87</books_count>
+  <ratings_count type="integer">64740</ratings_count>
+  <text_reviews_count type="integer">1582</text_reviews_count>
+  <original_publication_year type="integer">1990</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.94</average_rating>
+  <best_book type="Book">
+    <id type="integer">34510</id>
+    <title>Moving Pictures (Discworld, #10; Industrial Revolution, #1)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320456553l/34510._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320456553l/34510._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">3312754</id>
+  <books_count type="integer">83</books_count>
+  <ratings_count type="integer">66968</ratings_count>
+  <text_reviews_count type="integer">1583</text_reviews_count>
+  <original_publication_year type="integer">1996</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.29</average_rating>
+  <best_book type="Book">
+    <id type="integer">34527</id>
+    <title>Feet of Clay (Discworld, #19; City Watch, #3)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320490628l/34527._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320490628l/34527._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">46982</id>
+  <books_count type="integer">71</books_count>
+  <ratings_count type="integer">58891</ratings_count>
+  <text_reviews_count type="integer">1561</text_reviews_count>
+  <original_publication_year type="integer">2001</original_publication_year>
+  <original_publication_month type="integer">4</original_publication_month>
+  <original_publication_day type="integer">24</original_publication_day>
+  <average_rating>4.26</average_rating>
+  <best_book type="Book">
+    <id type="integer">48002</id>
+    <title>Thief of Time (Discworld, #26; Death, #5)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">968512</id>
+  <books_count type="integer">113</books_count>
+  <ratings_count type="integer">67894</ratings_count>
+  <text_reviews_count type="integer">1849</text_reviews_count>
+  <original_publication_year type="integer">1989</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">15</original_publication_day>
+  <average_rating>3.91</average_rating>
+  <best_book type="Book">
+    <id type="integer">64217</id>
+    <title>Pyramids (Discworld, #7)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2073281</id>
+  <books_count type="integer">65</books_count>
+  <ratings_count type="integer">58963</ratings_count>
+  <text_reviews_count type="integer">1800</text_reviews_count>
+  <original_publication_year type="integer">2003</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">25</original_publication_day>
+  <average_rating>4.21</average_rating>
+  <best_book type="Book">
+    <id type="integer">34511</id>
+    <title>Monstrous Regiment (Discworld, #31; Industrial Revolution, #3)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1375908503l/34511._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1375908503l/34511._SX50_.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">62360</id>
+  <books_count type="integer">109</books_count>
+  <ratings_count type="integer">77717</ratings_count>
+  <text_reviews_count type="integer">2060</text_reviews_count>
+  <original_publication_year type="integer">1988</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer">26</original_publication_day>
+  <average_rating>3.89</average_rating>
+  <best_book type="Book">
+    <id type="integer">34499</id>
+    <title>Sourcery (Discworld, #5; Rincewind #3)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">583655</id>
+  <books_count type="integer">80</books_count>
+  <ratings_count type="integer">74051</ratings_count>
+  <text_reviews_count type="integer">2366</text_reviews_count>
+  <original_publication_year type="integer">1996</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">7</original_publication_day>
+  <average_rating>4.23</average_rating>
+  <best_book type="Book">
+    <id type="integer">34532</id>
+    <title>Hogfather (Discworld, #20; Death, #4)</title>
+    <author>
+      <id type="integer">1654</id>
+      <name>Terry Pratchett</name>
+    </author>
+    <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1416342611l/34532._SX98_.jpg</image_url>
+    <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1416342611l/34532._SY75_.jpg</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+</GoodreadsResponse>

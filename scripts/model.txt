@@ -1,0 +1,14 @@
+Book
+    title [string] // title of the book
+    pages [integer] // number of pages in the book
+    published [integer] // year published
+    ISBN [integer] // 13 digit ISBN
+    series_number [integer] // number in Discworld series
+    subseries [Subseries] // subseries it belongs to
+    subseries_number [integer] // what number in the subseries
+    image [URL] // goodreads images
+    score [float (0-5)] // rating out of 5 stars
+
+Subseries
+    title [string] // name of series
+    length [integer]  // number of books in series
