@@ -7,6 +7,7 @@ from flask_limiter.util import get_remote_address as gra
 from .models import setup_db
 from .views.books import BooksView, BookView
 from .views.subseries import SubseriesView, SubseriesListView
+from .auth import requires_auth
 
 
 def create_app():
@@ -63,6 +64,12 @@ def add_login_flow_routes(app):
             abort(400)
 
         return jsonify(resp.json())
+
+    @app.route("/admin")
+    @requires_auth("post:books")
+    def admin():
+        return "You have valid administrator privileges"
+
 
 
 def register_error_handlers(app):
