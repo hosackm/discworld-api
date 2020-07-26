@@ -1,15 +1,17 @@
-from flask import Flask, jsonify
+import requests
+from flask import Flask, jsonify, request, abort, redirect
 from flask_restful import Api
 from flask_migrate import Migrate
 from .models import setup_db
 from .views.books import BooksView, BookView
 from .views.subseries import SubseriesView, SubseriesListView
 
-from .auth import requires_auth
-
 
 def create_app():
     app = Flask(__name__)
+
+    app.config.from_pyfile("settings.py")
+
     api = Api(app)
 
     api.add_resource(BooksView, "/api/books")
@@ -17,10 +19,7 @@ def create_app():
     api.add_resource(SubseriesListView, "/api/subseries")
     api.add_resource(SubseriesView, "/api/subseries/<int:subseries_id>")
 
-    @app.route("/")
-    @requires_auth("some-permissions")
-    def auth_req():
-        return "hello"
+    add_login_flow_routes(app)
 
     setup_db(app)
     register_error_handlers(app)
@@ -28,6 +27,39 @@ def create_app():
     Migrate(app, app.config["db"])
 
     return app
+
+
+def add_login_flow_routes(app):
+    @app.route("/login")
+    def login():
+        url = (f"https://{app.config['AUTH0_DOMAIN']}/authorize?"
+               f"audience={app.config['AUTH0_AUDIENCE']}&response_type=code&"
+               f"client_id={app.config['AUTH0_CLIENT_ID']}&"
+               f"redirect_uri={app.config['AUTH0_CALLBACK_URI']}")
+        return redirect(url)
+
+    @app.route("/callback")
+    def logged_in():
+        code = request.args.get("code")
+        if not code:
+            abort(400)
+
+        url = f"https://{app.config['AUTH0_DOMAIN']}/oauth/token"
+        params = {
+            "grant_type": "authorization_code",
+            "client_id": app.config["AUTH0_CLIENT_ID"],
+            "client_secret": app.config["AUTH0_CLIENT_SECRET"],
+            "code": code,
+            "redirect_uri": app.config["AUTH0_CALLBACK_URI"]
+        }
+        headers = {"Content-Type": "application/x-www-form-urlencoded"}
+
+        # retrieve token using code
+        resp = requests.post(url, data=params, headers=headers)
+        if resp.status_code != 200:
+            abort(400)
+
+        return jsonify(resp.json())
 
 
 def register_error_handlers(app):

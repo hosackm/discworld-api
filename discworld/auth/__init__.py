@@ -2,12 +2,8 @@ import json
 from flask import request, abort, current_app
 from functools import wraps
 from jose import jwt
+from jose.exceptions import JWTError
 from urllib.request import urlopen
-
-
-# current_app.config["AUTH0_DOMAIN"]
-# ALGORITHMS
-# API_AUDIENCE
 
 
 def get_token_auth_header():
@@ -34,7 +30,10 @@ def check_permissions(permission, payload):
 def verify_decode_jwt(token):
     jsonurl = urlopen(f"https://{current_app.config['AUTH0_DOMAIN']}/.well-known/jwks.json")
     jwks = json.loads(jsonurl.read())
-    unverified_header = jwt.get_unverified_header(token)
+    try:
+        unverified_header = jwt.get_unverified_header(token)
+    except JWTError:
+        abort(401)
 
     if "kid" not in unverified_header:
         abort(401)
