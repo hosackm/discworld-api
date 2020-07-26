@@ -38,12 +38,6 @@ class BooksView(Resource):
 
         return jsonify({"book": book.format()})
 
-    def delete(self):
-        abort(405)
-
-    def patch(self):
-        abort(405)
-
 
 class BookView(Resource):
     def get(self, book_id):
@@ -54,9 +48,6 @@ class BookView(Resource):
         return jsonify({
             "book": book.format()
         })
-
-    def post(self, book_id):
-        abort(405)
 
     def delete(self, book_id):
         book = Book.query.get(book_id)

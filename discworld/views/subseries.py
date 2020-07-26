@@ -41,12 +41,6 @@ class SubseriesListView(Resource):
             "subseries": sub.format()
         })
 
-    def delete(self):
-        abort(405)
-
-    def patch(self):
-        abort(405)
-
 
 class SubseriesView(Resource):
     def get(self, subseries_id):
@@ -59,9 +53,6 @@ class SubseriesView(Resource):
         sub_json["books"] = [b.format() for b in books]
 
         return jsonify(sub_json)
-
-    def post(self, subseries_id):
-        abort(405)
 
     def delete(self, subseries_id):
         sub = Subseries.query.get(subseries_id)
