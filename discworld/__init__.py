@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
 from flask_restful import Api
 from flask_migrate import Migrate
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from .models import setup_db
 from .views.books import BooksView, BookView
 from .views.subseries import SubseriesView, SubseriesListView
@@ -9,6 +11,11 @@ from .views.subseries import SubseriesView, SubseriesListView
 def create_app():
     app = Flask(__name__)
     api = Api(app)
+    Limiter(
+        app,
+        key_func=get_remote_address,
+        default_limits=["200 per day", "50 per hour"]
+    )
 
     api.add_resource(BooksView, "/api/books")
     api.add_resource(BookView, "/api/books/<int:book_id>")
