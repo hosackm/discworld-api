@@ -67,8 +67,8 @@ class Subseries(db.Model):
         }
 
 
-def setup_db(app, db_path="postgresql://localhost:5432/discworld"):
-    app.config["SQLALCHEMY_DATABASE_URI"] = db_path
+def setup_db(app):
+    app.config["SQLALCHEMY_DATABASE_URI"] = app.config["DATABASE_URI"]
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
