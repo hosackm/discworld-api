@@ -5,6 +5,8 @@ from .models import setup_db
 from .views.books import BooksView, BookView
 from .views.subseries import SubseriesView, SubseriesListView
 
+from .auth import requires_auth
+
 
 def create_app():
     app = Flask(__name__)
@@ -14,6 +16,11 @@ def create_app():
     api.add_resource(BookView, "/api/books/<int:book_id>")
     api.add_resource(SubseriesListView, "/api/subseries")
     api.add_resource(SubseriesView, "/api/subseries/<int:subseries_id>")
+
+    @app.route("/")
+    @requires_auth("some-permissions")
+    def auth_req():
+        return "hello"
 
     setup_db(app)
     register_error_handlers(app)
