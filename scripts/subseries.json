@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Rincewind",
+        "num_books": 8
+    }, {
+        "title": "Witches",
+        "num_books": 6
+    }, {
+        "title": "Death",
+        "num_books": 5
+    }, {
+        "title": "Djelibeybi",
+        "num_books": 1
+    }, {
+        "title": "City Watch",
+        "num_books": 8
+    }, {
+        "title": "Industrial Revolution",
+        "num_books": 3
+    }, {
+        "title": "Omnia",
+        "num_books": 1
+    }, {
+        "title": "Überwald",
+        "num_books": 1
+    }, {
+        "title": "Moist von Lipwig",
+        "num_books": 3
+    }, {
+        "title": "Tiffany Aching",
+        "num_books": 5
+    }
+]

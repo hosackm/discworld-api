@@ -7,9 +7,10 @@ class Book(db.Model):
     __tablename__ = "books"
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
+    book_number = db.Column(db.Integer)
     pages = db.Column(db.Integer)
     year = db.Column(db.Integer)
-    isbn = db.Column(db.Integer)
+    isbn = db.Column(db.String())
     subseries_number = db.Column(db.Integer)
     image_url = db.Column(db.String())
     score = db.Column(db.Float)
