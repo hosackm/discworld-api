@@ -3,6 +3,7 @@ flask-limiter
 flask-migrate
 flask-restful
 flask-sqlalchemy
+gunicorn
 python-dotenv
 psycopg2
 requests
