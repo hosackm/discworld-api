@@ -1,0 +1,7 @@
+from os import environ
+
+AUTH0_DOMAIN = environ.get("AUTH0_DOMAIN")
+AUTH0_AUDIENCE = environ.get("AUTH0_AUDIENCE")
+AUTH0_CLIENT_ID = environ.get("AUTH0_CLIENT_ID")
+AUTH0_CLIENT_SECRET = environ.get("AUTH0_CLIENT_SECRET")
+AUTH0_CALLBACK_URI = environ.get("AUTH0_CALLBACK_URI")

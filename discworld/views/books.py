@@ -22,6 +22,7 @@ class BooksView(Resource):
     def get(self):
         books = Book.query.order_by(Book.id).all()
         return jsonify({
+            "num_results": len(books),
             "books": [b.format() for b in books]
         })
 
@@ -37,12 +38,6 @@ class BooksView(Resource):
 
         return jsonify({"book": book.format()})
 
-    def delete(self):
-        abort(405)
-
-    def patch(self):
-        abort(405)
-
 
 class BookView(Resource):
     def get(self, book_id):
@@ -53,9 +48,6 @@ class BookView(Resource):
         return jsonify({
             "book": book.format()
         })
-
-    def post(self, book_id):
-        abort(405)
 
     def delete(self, book_id):
         book = Book.query.get(book_id)
