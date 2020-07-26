@@ -22,6 +22,7 @@ class BooksView(Resource):
     def get(self):
         books = Book.query.order_by(Book.id).all()
         return jsonify({
+            "num_results": len(books),
             "books": [b.format() for b in books]
         })
 

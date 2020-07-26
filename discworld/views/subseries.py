@@ -1,7 +1,7 @@
 from flask import jsonify, abort
-from flask_restful import Resource, fields, marshal_with, reqparse
+from flask_restful import Resource, fields, reqparse
 from collections import OrderedDict
-from ..models import Subseries
+from ..models import Subseries, Book
 
 
 subseries_fields = OrderedDict(
@@ -25,6 +25,7 @@ class SubseriesListView(Resource):
     def get(self):
         subs = Subseries.query.order_by(Subseries.id).all()
         return jsonify({
+            "num_results": len(subs),
             "subseries": [s.format() for s in subs]
         })
 
@@ -48,18 +49,20 @@ class SubseriesListView(Resource):
 
 
 class SubseriesView(Resource):
-    @marshal_with(subseries_fields, envelope="subseries")
     def get(self, subseries_id):
         sub = Subseries.query.get(subseries_id)
         if not sub:
             abort(404)
 
-        return jsonify({"subseries": sub.format()})
+        sub_json = sub.format()
+        books = Book.query.filter(Book.subseries_id == subseries_id).order_by(Book.subseries_number)
+        sub_json["books"] = [b.format() for b in books]
+
+        return jsonify(sub_json)
 
     def post(self, subseries_id):
-        abort(405, "Method not allowed on book.  Do not include subseries_id in URL parameters.")
+        abort(405)
 
-    @marshal_with(subseries_fields)
     def delete(self, subseries_id):
         sub = Subseries.query.get(subseries_id)
         if not sub:
