@@ -1,1 +1,1 @@
-web: gunicorn discworld:create_app --log-file -
+web: gunicorn wsgi.wsgi_app --log-file -
