@@ -8,30 +8,37 @@ from .models import setup_db
 from .views.books import BooksView, BookView
 from .views.subseries import SubseriesView, SubseriesListView
 from .auth import requires_auth
+from .caching import cache
 
 
 def create_app(testing_config=None):
+    # create base Flask app and configure based on environment
     app = Flask(__name__)
-
     if not testing_config:
         app.config.from_pyfile("settings.py")
     else:
         app.config.from_mapping(testing_config)
 
-    api = Api(app)
-    Limiter(app, key_func=gra, default_limits="200/day 50/hour".split())
+    # setup db and migrations
+    setup_db(app)
+    Migrate(app, app.config["db"])
 
+    # Add flask-restful API resources
+    api = Api(app)
     api.add_resource(BooksView, "/api/books")
     api.add_resource(BookView, "/api/books/<int:book_id>")
     api.add_resource(SubseriesListView, "/api/subseries")
     api.add_resource(SubseriesView, "/api/subseries/<int:subseries_id>")
 
+    # add rate limiter to entire application
+    Limiter(app, key_func=gra, default_limits="200/day 50/hour".split())
+
+    # add cache
+    cache.init_app(app)
+
+    # add non-API endpoints
     add_login_flow_routes(app)
-
-    setup_db(app)
     register_error_handlers(app)
-
-    Migrate(app, app.config["db"])
 
     return app
 
@@ -107,3 +114,7 @@ def register_error_handlers(app):
         return jsonify({
             "message": "You are not authorized for resource"
         })
+
+def get_cache():
+    cache = Cache(config={"CACHE-TYPE": "simple"})
+    return cache

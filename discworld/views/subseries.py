@@ -2,6 +2,7 @@ from flask import jsonify, abort
 from flask_restful import Resource, fields, reqparse
 from collections import OrderedDict
 from ..models import Subseries, Book
+from ..caching import cache
 
 
 subseries_fields = OrderedDict(
@@ -22,6 +23,7 @@ for arg in subs_patch_parser.args:
 
 
 class SubseriesListView(Resource):
+    @cache.cached(timeout=50)
     def get(self):
         subs = Subseries.query.order_by(Subseries.id).all()
         return jsonify({
@@ -43,6 +45,7 @@ class SubseriesListView(Resource):
 
 
 class SubseriesView(Resource):
+    @cache.cached(timeout=50)
     def get(self, subseries_id):
         sub = Subseries.query.get(subseries_id)
         if not sub:

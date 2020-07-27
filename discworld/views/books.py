@@ -1,6 +1,7 @@
 from flask import abort, jsonify
 from flask_restful import Resource, reqparse
 from ..models import Book, db
+from ..caching import cache
 
 
 book_post_parser = reqparse.RequestParser()
@@ -20,6 +21,7 @@ for args in book_patch_parser.args:
 
 
 class BooksView(Resource):
+    @cache.cached(timeout=50)
     def get(self):
         books = Book.query.order_by(Book.id).all()
         return jsonify({
@@ -41,6 +43,7 @@ class BooksView(Resource):
 
 
 class BookView(Resource):
+    @cache.cached(timeout=50)
     def get(self, book_id):
         book = Book.query.get(book_id)
         if not book:
