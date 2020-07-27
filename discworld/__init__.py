@@ -35,6 +35,7 @@ def create_app(testing_config=None):
 
     # add cache
     cache.init_app(app)
+    app.cache = cache
 
     # add non-API endpoints
     add_login_flow_routes(app)

@@ -22,6 +22,8 @@ def app():
     yield app
 
     app.config["db"].drop_all()
+    with app.app_context():
+        app.cache.clear()
 
 
 @pytest.fixture

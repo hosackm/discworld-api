@@ -191,6 +191,7 @@ def test_delete_subseries_persists(client):
     resp = client.get("/api/subseries")
     assert resp.json["num_results"] == 0
 
+
 def test_delete_book_persists(client):
     # POST a subseries
     subseries = dict(title="The Hardy Boys", num_books=58)
