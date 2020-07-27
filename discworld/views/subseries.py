@@ -48,7 +48,8 @@ class SubseriesView(Resource):
         if not sub:
             abort(404)
 
-        sub_json = sub.format()
+        sub_json = {"subseries": sub.format()}
+
         books = Book.query.filter(Book.subseries_id == subseries_id).order_by(Book.subseries_number)
         sub_json["books"] = [b.format() for b in books]
 

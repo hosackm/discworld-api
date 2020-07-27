@@ -10,10 +10,13 @@ from .views.subseries import SubseriesView, SubseriesListView
 from .auth import requires_auth
 
 
-def create_app():
+def create_app(testing_config=None):
     app = Flask(__name__)
 
-    app.config.from_pyfile("settings.py")
+    if not testing_config:
+        app.config.from_pyfile("settings.py")
+    else:
+        app.config.from_mapping(testing_config)
 
     api = Api(app)
     Limiter(app, key_func=gra, default_limits="200/day 50/hour".split())
@@ -69,7 +72,6 @@ def add_login_flow_routes(app):
     @requires_auth("post:books")
     def admin():
         return "You have valid administrator privileges"
-
 
 
 def register_error_handlers(app):

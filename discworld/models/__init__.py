@@ -36,7 +36,9 @@ class Book(db.Model):
             "pages": self.pages,
             "year": self.year,
             "isbn": self.isbn,
+            "book_number": self.book_number,
             "subseries_number": self.subseries_number,
+            "subseries_id": self.subseries_id,
             "image_url": self.image_url,
             "score": self.score
         }
