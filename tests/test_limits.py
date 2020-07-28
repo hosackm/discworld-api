@@ -12,6 +12,7 @@ import pytest
                           ("delete", "/api/subseries/1"),
                           ])
 def test_api_is_rate_limited(client, endpoint):
+    # get access to the client method and the endpoint for this parametrized test
     method, url = endpoint
     method = getattr(client, method)
 

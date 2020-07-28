@@ -3,6 +3,7 @@ from flask_restful import Resource, fields, reqparse
 from collections import OrderedDict
 from ..models import Subseries, Book
 from ..caching import cache
+from ..auth import requires_auth
 
 
 subseries_fields = OrderedDict(
@@ -31,6 +32,7 @@ class SubseriesListView(Resource):
             "subseries": [s.format() for s in subs]
         })
 
+    @requires_auth("post:subseries")
     def post(self):
         # insert the subseries into the database
         args = subs_post_parser.parse_args(strict=True)
@@ -58,6 +60,7 @@ class SubseriesView(Resource):
 
         return jsonify(sub_json)
 
+    @requires_auth("delete:subseries")
     def delete(self, subseries_id):
         sub = Subseries.query.get(subseries_id)
         if not sub:
@@ -69,6 +72,7 @@ class SubseriesView(Resource):
             "deleted_id": subseries_id
         })
 
+    @requires_auth("patch:subseries")
     def patch(self, subseries_id):
         args = subs_patch_parser.parse_args(strict=True)
         sub = Subseries.query.get(subseries_id)

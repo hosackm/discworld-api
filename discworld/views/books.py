@@ -2,6 +2,7 @@ from flask import abort, jsonify
 from flask_restful import Resource, reqparse
 from ..models import Book, db
 from ..caching import cache
+from ..auth import requires_auth
 
 
 book_post_parser = reqparse.RequestParser()
@@ -29,6 +30,7 @@ class BooksView(Resource):
             "books": [b.format() for b in books]
         })
 
+    @requires_auth("post:books")
     def post(self):
         args = book_post_parser.parse_args()
         book = Book(**args)
@@ -53,6 +55,7 @@ class BookView(Resource):
             "book": book.format()
         })
 
+    @requires_auth("delete:books")
     def delete(self, book_id):
         book = Book.query.get(book_id)
         if not book:
@@ -64,6 +67,7 @@ class BookView(Resource):
             "deleted_id": book_id
         })
 
+    @requires_auth("patch:books")
     def patch(self, book_id):
         args = book_patch_parser.parse_args()
         book = Book.query.get(book_id)

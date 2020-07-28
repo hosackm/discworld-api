@@ -77,7 +77,7 @@ def add_login_flow_routes(app):
         return jsonify(resp.json())
 
     @app.route("/admin")
-    @requires_auth("post:books")
+    @requires_auth("admin:access")
     def admin():
         return "You have valid administrator privileges"
 
@@ -115,7 +115,3 @@ def register_error_handlers(app):
         return jsonify({
             "message": "You are not authorized for resource"
         })
-
-def get_cache():
-    cache = Cache(config={"CACHE-TYPE": "simple"})
-    return cache
