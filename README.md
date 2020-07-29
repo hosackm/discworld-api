@@ -1,6 +1,6 @@
 # Discworld API
 
-Discworld API is a RESTful API that contains information about the books and subseries of the [Discworld universe](https://en.wikipedia.org/wiki/Discworld).  It can be used to retrieve information about the 41 books written by Terry Pratchett. A live demo can be found [here](https://floating-ridge-73134.herokuapp.com/).  Read on to learn about the API endpoints and to make use of this live demo.
+Discworld API is a RESTful API that contains information about the books and subseries of the [Discworld universe](https://en.wikipedia.org/wiki/Discworld).  It can be used to retrieve information about the 41 books written by Terry Pratchett. A live demo can be found [here](https://floating-ridge-73134.herokuapp.com/info).  Read on to learn about the API endpoints and to make use of this live demo.
 
 ## API
 
