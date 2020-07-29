@@ -5,9 +5,10 @@ Discworld API is a RESTful API that contains information about the books and sub
 ## API
 
 ### Authorization
-/admin - administrator page that requires administrator priveleges to access
-/login - visit in browser.  create login through Auth0 interface.  email discworld@matthosack.com to request POST/PATCH/DELETE access for books and subseries
-/callback - Auth0 will redirect logins to this endpoint.  You will be able to receive the access token in the JSON body.
+
+    * /admin - administrator page that requires administrator priveleges to access
+    * /login - visit in browser.  create login through Auth0 interface.  email discworld@matthosack.com to request POST/PATCH/DELETE access for books and subseries
+    * /callback - Auth0 will redirect logins to this endpoint.  You will be able to receive the access token in the JSON body.
 
 ### Endpoints
 
