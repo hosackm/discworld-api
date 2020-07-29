@@ -82,6 +82,12 @@ def add_login_flow_routes(app):
         return "You have valid administrator privileges"
 
 
+    # landing page for documentation
+    @app.route("/info")
+    def info():
+        return jsonify({"message": "Welcome to the Discworld API!"})
+
+
 def register_error_handlers(app):
     """
     Register error handlers.  Requests that are aborted inside the Flask Restful
