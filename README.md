@@ -35,8 +35,9 @@ The endpoint `/api/books` is used to retrieve information about a specific book 
     "book_number": Integer representing the number of the book in the Discworld series,
     "pages": Integer number of pages in the book,
     "year": Integer year of the first publication,
-    "isbn": String representing the ISBN of the book,
+    "isbn": Integer representing the ISBN of the book,
     "subseries_number": Integer number of the book within its subseries,
+    "subseries_id": Integer number representing the subseries this book belongs to,
     "image_url": String URL to the image,
     "score": Float rating for the book betwen 0 and 5
 }
@@ -60,7 +61,7 @@ curl https://floating-ridge-73134.herokuapp.com/api/books   \
     "book_number": 1,                                       \
     "pages": 123,                                           \
     "year": 1999,                                           \
-    "isbn": "ANISBNSEQUENCE",                               \
+    "isbn": 1234567890,                               \
     "subseries_number": 1                                   \
     "image_url": "https://via.placeholder.com/400.png",     \
     "score": 4.8}"
